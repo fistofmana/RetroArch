@@ -673,7 +673,7 @@ static void android_input_set_keybinds(void *data, unsigned device,
             break;
         case DEVICE_CHEAP_SNES_PAD:
             g_settings.input.device[port] = device;
-            strlcpy(g_settings.input.device_names[port], "Jared's Cheap SNES pad",
+            strlcpy(g_settings.input.device_names[port], "USB SNES pad",
                     sizeof(g_settings.input.device_names[port]));
             dpad_state[id].dzone_min = -1.00f;
             dpad_state[id].dzone_max = 1.00f;
