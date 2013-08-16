@@ -109,6 +109,8 @@ void input_autodetect_setup(void *data, char *msg, size_t sizeof_msg, unsigned p
       device = DEVICE_LOGITECH_DUAL_ACTION;
    else if (strstr(name_buf, "Logitech") && strstr(name_buf, "Precision"))
       device = DEVICE_LOGITECH_PRECISION_GAMEPAD;
+   else if (strstr(name_buf, "PS3/USB Cordless Gamepad"))
+      device = DEVICE_LOGITECH_CORDLESS_PRECISION;
    else if (strstr(name_buf, "iControlPad-")) // followed by a 4 (hex) char HW id
       device = DEVICE_ICONTROLPAD_HID_JOYSTICK;
    else if (strstr(name_buf, "SEGA VIRTUA STICK High Grade"))
@@ -181,6 +183,8 @@ void input_autodetect_setup(void *data, char *msg, size_t sizeof_msg, unsigned p
       device = DEVICE_NYKO_PLAYPAD_PRO;
    else if (strstr(name_buf, "2-Axis, 8-Button"))
       device = DEVICE_GENIUS_MAXFIRE_G08XU;
+   else if (strstr(name_buf, "2Axes 11Keys Game  Pad"))
+       device = DEVICE_CHEAP_SNES_PAD;
    else if (strstr(name_buf, "USB,2-axis 8-button gamepad"))
       device = DEVICE_USB_2_AXIS_8_BUTTON_GAMEPAD;
    else if (strstr(name_buf, "BUFFALO BGC-FC801"))
@@ -211,8 +215,6 @@ void input_autodetect_setup(void *data, char *msg, size_t sizeof_msg, unsigned p
       device = DEVICE_DRAGONRISE;
    else if (strstr(name_buf, "Thrustmaster T Mini"))
       device = DEVICE_THRUSTMASTER_T_MINI;
-   else if (strstr(name_buf, "2Axes 11Keys Game  Pad"))
-      device = DEVICE_TOMEE_NES_USB;
    else if (strstr(name_buf, "rk29-keypad") || strstr(name_buf, "GAMEMID"))
       device = DEVICE_GAMEMID;
    else if (strstr(name_buf, "USB Gamepad"))
